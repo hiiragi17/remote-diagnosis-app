@@ -1,22 +1,13 @@
 'use client';
 
 import DiagnosisButton from './components/DiagnosisButton';
+import Header from './components/Header';
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       {/* ヘッダー */}
-      <header className="text-center py-8">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">
-          ○○なので、
-        </h1>
-        <h2 className="text-5xl font-bold text-indigo-600 mb-2">
-          リモートします。
-        </h2>
-        <p className="text-lg text-gray-600 italic">
-          〜 今日のリモート理由診断アプリ 〜
-        </p>
-      </header>
+      <Header /> 
 
        {/* メインコンテンツ */}
       <main className="flex flex-col items-center justify-center px-4">
