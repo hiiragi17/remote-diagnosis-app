@@ -1,6 +1,9 @@
 'use client';
 
 import { useSearchParams, useRouter } from 'next/navigation';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+
 
 export default function ResultPage() {
   const searchParams = useSearchParams();
@@ -8,16 +11,13 @@ export default function ResultPage() {
   const result = searchParams.get('result');
 
   return (
+    // ヘッダー
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      {/* ヘッダー */}
-      <header className="text-center py-8">
-        <h1 className="text-4xl font-bold text-gray-800 mb-2">
-          診断結果
-        </h1>
-        <p className="text-lg text-gray-600 italic">
-          〜 今日のあなたのリモート理由 〜
-        </p>
-      </header>
+      <Header 
+          title="診断結果"
+          subtitle="〜 今日のあなたのリモート理由 〜"
+          showMainTitle={false}
+        />
 
       {/* メインコンテンツ */}
       <main className="flex flex-col items-center justify-center px-4">
@@ -83,11 +83,7 @@ export default function ResultPage() {
       </main>
 
       {/* フッター */}
-      <footer className="text-center py-8 mt-16">
-        <p className="text-gray-500 text-sm">
-          今日も素敵なリモートワークライフを ✨
-        </p>
-      </footer>
+      <Footer showDisclaimer={false} />
     </div>
   );
 }

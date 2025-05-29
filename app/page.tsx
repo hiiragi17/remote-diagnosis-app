@@ -1,6 +1,7 @@
 'use client';
 
 import DiagnosisButton from './components/DiagnosisButton';
+import Footer from './components/Footer';
 import Header from './components/Header';
 
 export default function Home() {
@@ -29,7 +30,7 @@ export default function Home() {
             <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg border-l-4 border-gray-400">
               <div className="text-xl mt-1">🤔</div>
               <p className="font-medium leading-relaxed">
-                受託会社でお客様との取引もリモートなのに、なぜ出社しなければいけないのか？
+                やり取りする人が全員リモートなのに、出社する必要があるのか？
               </p>
             </div>
             <div className="text-center mt-6 p-3 bg-blue-50 rounded-lg">
@@ -40,11 +41,11 @@ export default function Home() {
           </div>
           
           <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <div className="flex items-center">
+            <div className="flex items-center justify-center">
               <div className="text-2xl mr-3">💡</div>
-              <div className="text-left">
+              <div className="text-center">
                 <p className="font-bold text-gray-800">でも大丈夫！</p>
-                <p className="text-gray-700">このアプリがあれば、それらしいリモート理由を捻出できます！</p>
+                <p className="text-gray-700">このアプリがあれば、リモート理由を捻出できます。</p>
               </div>
             </div>
           </div>
@@ -63,23 +64,10 @@ export default function Home() {
           <DiagnosisButton />
         </div>
 
-        {/* 説明テキスト（削除） */}
-
       </main>
-      <div className="max-w-2xl mx-auto px-4 mb-8">
-        <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-          <p className="text-xs text-red-600 text-center leading-relaxed">
-            このアプリで出された理由を使用されて生じた被害に関して、当方は一切責任を負いません。ご了承ください。
-          </p>
-        </div>
-      </div>
 
       {/* フッター */}
-      <footer className="text-center py-8 mt-16">
-        <p className="text-gray-500 text-sm">
-          今日も素敵なリモートワークライフを ✨
-        </p>
-      </footer>
+      <Footer showDisclaimer={true} />
     </div>
   );
 }
