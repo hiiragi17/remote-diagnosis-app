@@ -15,7 +15,7 @@ export default function ResultClient({ result }: ResultClientProps) {
   // 動的にページタイトルを変更
   useEffect(() => {
     if (result) {
-      document.title = `${result}なので、リモートします。`;
+      document.title = `${result}、リモートします。`;
     }
   }, [result]);
 
