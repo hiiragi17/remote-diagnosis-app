@@ -38,7 +38,7 @@ export default function ResultPage() {
               <>
                 {/* 結果テキスト */}
                 <div className="bg-indigo-50 rounded-lg p-6 mb-6">
-                  <p className="text-2xl font-bold text-indigo-800 mb-2">
+                  <p className="text-3xl font-bold text-indigo-800 mb-2">
                     {result}
                   </p>
                   <p className="text-3xl font-bold text-gray-800">
