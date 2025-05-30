@@ -64,7 +64,7 @@ function ResultContent() {
                 <button
                   onClick={() => {
                     const text = `${result}、リモートします。`;
-                    const hashtag = '#○○なので、リモートします';
+                    const hashtag = '#○○なので、リモートします。';
                     const url = window.location.href;
                     const tweetText = `${text} ${hashtag}`;
                     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(url)}`;
