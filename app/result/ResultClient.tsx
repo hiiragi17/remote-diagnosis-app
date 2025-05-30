@@ -65,7 +65,7 @@ export default function ResultClient({ result }: ResultClientProps) {
               <div className="mb-2">
                 <button
                   onClick={() => {
-                    const text = `${result}なので、リモートします。`;
+                    const text = `${result}、リモートします。`;
                     const hashtag = '#○○なので、リモートします。';
                     const url = window.location.href;
                     const tweetText = `${text} ${hashtag}`;

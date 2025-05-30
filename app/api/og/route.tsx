@@ -1,4 +1,3 @@
-// app/api/og/route.ts
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 
