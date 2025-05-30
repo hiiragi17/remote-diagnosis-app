@@ -66,7 +66,7 @@ export default function ResultClient({ result }: ResultClientProps) {
                 <button
                   onClick={() => {
                     const text = `${result}、リモートします。`;
-                    const hashtag = '#○○なので、リモートします。';
+                    const hashtag = '#OOなのでリモートします。';
                     const url = window.location.href;
                     const tweetText = `${text} ${hashtag}`;
                     const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent(url)}`;
