@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![badge](https://img.shields.io/badge/thank%20you-for%20visiting-brightgreen)
+<br>
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)
 
-## Getting Started
+# ○○なので、リモートします。
+## サービスURL
+https://remote-diagnosis-app.vercel.app/
 
-First, run the development server:
+## サービス概要
+リモートは、Webエンジニアにとって不可欠だ。<br>
+別に出社してもいいけど、強要されるのはなんかやだなあ。<br>
+リモートOKって聞いてたのになあ……世知辛い……<br>
+そんな貴方も、大丈夫。
+このアプリがあればね。
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+診断するボタンを押すだけで、<br>
+それっぽいリモート理由が出てくる！<br>
+貴方はその理由をSlackで送るだけ！
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 貴方の快適なリモートワークに役立ちますように。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+※実際に出てきた理由を使って上司に怒られても責任は負えません。悪しからず※
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 使用技術
+- Next.js 15.1.8
+- React 19.0.0
+- TypeScript 5系
+- Tailwind CSS 3.4.1
+- Vercel Analytics 1.5.0
+- Vercel OG 0.6.8
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 制作期間
+2025.5.24〜2025.5.31
