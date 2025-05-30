@@ -6,7 +6,7 @@ export const runtime = 'edge';
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
-    const result = searchParams.get('result') || 'あなた';
+    const result = searchParams.get('result') || '○○なので';
 
     return new ImageResponse(
       (
