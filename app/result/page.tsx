@@ -9,7 +9,7 @@ type Props = {
 
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const params = await searchParams;
-  const result = params.result || 'あなた';
+  const result = params.result || '○○なので';
   const title = `${result}、リモートします。`;
   const description = '今日のリモート理由を診断するアプリ';
   const ogImageUrl = `/api/og?result=${encodeURIComponent(result)}`;
