@@ -35,7 +35,7 @@ export async function GET() {
                 marginBottom: '20px',
               }}
             >
-              ○○なので、リモートします。
+              今日はリモートします！
             </div>
             <div
               style={{
