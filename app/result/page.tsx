@@ -1,4 +1,3 @@
-// app/result/page.tsx
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import ResultClient from './ResultClient';
