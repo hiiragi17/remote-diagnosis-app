@@ -1,41 +1,73 @@
 'use client';
 
-import { useState } from 'react';
-import { reasons } from './data/reasons';
+import DiagnosisButton from './components/DiagnosisButton';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 export default function Home() {
-  const [result, setResult] = useState<string>('');
-
-  // 診断ボタンを押した時の処理
-  const handleDiagnosis = () => {
-    // ランダムに理由を選択
-    const randomIndex = Math.floor(Math.random() * reasons.length);
-    const selectedReason = reasons[randomIndex];
-    setResult(selectedReason);
-  };
-
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-8">
-          ○○なので、リモートします。
-        </h1>
-        
-        <button
-          onClick={handleDiagnosis}
-          className="bg-blue-500 text-white px-8 py-4 rounded text-xl mb-8"
-        >
-          診断する
-        </button>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      {/* ヘッダー */}
+      <Header /> 
 
-        {result && (
-          <div className="mt-8">
-            <p className="text-2xl">
-              {result}、リモートします。
-            </p>
+       {/* メインコンテンツ */}
+      <main className="flex flex-col items-center justify-center px-4">
+        {/* 説明文セクション */}
+        <div className="max-w-lg w-full mb-8">
+          <div className="text-left space-y-4 text-gray-700 mb-6">
+            <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg border-l-4 border-gray-400">
+              <div className="text-xl mt-1">😤</div>
+              <p className="font-medium leading-relaxed">
+                フルリモートOKの会社のはずだったのに、急に原則出社だと言われた……
+              </p>
+            </div>
+            <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg border-l-4 border-gray-400">
+              <div className="text-xl mt-1">😔</div>
+              <p className="font-medium leading-relaxed">
+                フルリモートOKだったはずなのに、リモートが禁止だと言われた……
+              </p>
+            </div>
+            <div className="flex items-start space-x-3 p-3 bg-gray-50 rounded-lg border-l-4 border-gray-400">
+              <div className="text-xl mt-1">🤔</div>
+              <p className="font-medium leading-relaxed">
+                やり取りする人が全員リモートなのに、出社する必要があるのか？
+              </p>
+            </div>
+            <div className="text-center mt-6 p-3 bg-blue-50 rounded-lg">
+              <p className="text-lg font-semibold text-indigo-600">
+                💭 皆様はそんなことありませんか？
+              </p>
+            </div>
           </div>
-        )}
-      </div>
+          
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
+            <div className="flex items-center justify-center">
+              <div className="text-2xl mr-3">💡</div>
+              <div className="text-center">
+                <p className="font-bold text-gray-800">でも大丈夫！</p>
+                <p className="text-gray-700">このアプリがあれば、リモート理由を捻出できます。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 診断ボタンカード */}
+        <div className="bg-white rounded-xl shadow-lg p-8 max-w-lg w-full mb-8">
+          <div className="text-center mb-6">
+            <div className="text-6xl mb-4">🎯</div>
+          </div>
+
+          <p className="text-xl font-bold text-indigo-600 mb-8 text-center">
+            さあ貴方も早速診断！
+          </p>
+          {/* 診断ボタン */}
+          <DiagnosisButton />
+        </div>
+
+      </main>
+
+      {/* フッター */}
+      <Footer showDisclaimer={true} />
     </div>
   );
 }
