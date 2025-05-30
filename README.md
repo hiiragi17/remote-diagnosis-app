@@ -34,4 +34,4 @@ https://remote-diagnosis-app.vercel.app/
 - Vercel OG 0.6.8
 
 ### 制作期間
-2025.5.24〜2025.5.31
+2025.5.24〜2025.5.30
