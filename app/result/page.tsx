@@ -64,7 +64,7 @@ export default function ResultPage() {
               <div className="mb-2">
                 <button
                   onClick={() => {
-                    const text = `${result}、リモートします！`;
+                    const text = `${result}、リモートします。`;
                     const hashtag = '#○○なので、リモートします。';
                     const url = window.location.href;
                     const tweetText = `${text} ${hashtag}`;
