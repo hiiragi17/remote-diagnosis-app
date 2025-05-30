@@ -94,7 +94,7 @@ export default function ResultClient({ result }: ResultClientProps) {
         {/* 追加メッセージ */}
         <div className="max-w-md text-center">
           <p className="text-gray-600 text-sm mb-4">
-            また明日も新しい理由で診断してみてくださいね！
+            貴方にぴったりな理由が出るまで診断してみてくださいね！
           </p>
           <p className="text-xs text-gray-500">
             ※この理由はランダムに生成されています
