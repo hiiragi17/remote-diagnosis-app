@@ -10,6 +10,8 @@
 ## サービスURL
 https://remote-diagnosis-app.vercel.app/
 
+<img width="1200" alt="スクリーンショット 2025-05-30 22 16 35" src="https://github.com/user-attachments/assets/87a4a48b-66f3-4248-a364-2ec7e9882fab" />
+
 ## サービス概要
 リモートは、Webエンジニアにとって不可欠だ。<br>
 別に出社してもいいけど、強要されるのはなんかやだなあ。<br>
