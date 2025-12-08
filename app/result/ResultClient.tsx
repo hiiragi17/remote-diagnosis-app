@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import { reasons } from '../data/reasons';
 
 interface ResultClientProps {
   result: string | undefined;
@@ -12,12 +13,22 @@ interface ResultClientProps {
 export default function ResultClient({ result }: ResultClientProps) {
   const router = useRouter();
 
-  // 動的にページタイトルを変更
+  // セキュリティ: resultが有効な理由リストに含まれているかチェック
+  const isValidResult = result && reasons.includes(result);
+
+  // 無効な結果の場合、ホームページにリダイレクト
   useEffect(() => {
-    if (result) {
+    if (result && !isValidResult) {
+      router.push('/');
+    }
+  }, [result, isValidResult, router]);
+
+  // 動的にページタイトルを変更（検証済みの値のみ使用）
+  useEffect(() => {
+    if (isValidResult) {
       document.title = `${result}、リモートします。`;
     }
-  }, [result]);
+  }, [result, isValidResult]);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -34,8 +45,8 @@ export default function ResultClient({ result }: ResultClientProps) {
           <div className="text-center">
             {/* 結果アイコン */}
             <div className="text-6xl mb-6">🎉</div>
-            
-            {result && (
+
+            {isValidResult && (
               <>
                 {/* 結果テキスト */}
                 <div className="bg-indigo-50 rounded-lg p-6 mb-6">
@@ -61,7 +72,7 @@ export default function ResultClient({ result }: ResultClientProps) {
             )}
 
             {/* シェアボタン */}
-            {result && (
+            {isValidResult && (
               <div className="mb-2">
                 <button
                   onClick={() => {

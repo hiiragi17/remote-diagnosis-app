@@ -1,5 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+import { reasons } from '../../data/reasons';
 
 export const runtime = 'edge';
 
@@ -7,6 +8,9 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const result = searchParams.get('result') || 'OOなので';
+
+    // セキュリティ: resultが有効な理由リストに含まれているかチェック
+    const validResult = reasons.includes(result) ? result : 'OOなので';
 
     return new ImageResponse(
       (
@@ -71,7 +75,7 @@ export async function GET(request: NextRequest) {
                   lineHeight: '1.2',
                 }}
               >
-                {result}、
+                {validResult}、
               </div>
               <div
                 style={{

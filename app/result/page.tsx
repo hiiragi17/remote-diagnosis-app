@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import ResultClient from './ResultClient';
+import { reasons } from '../data/reasons';
 
 type Props = {
   searchParams: Promise<{ result?: string }>
@@ -9,9 +10,13 @@ type Props = {
 export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const params = await searchParams;
   const result = params.result || '○○なので';
-  const title = `${result}、リモートします。`;
+
+  // セキュリティ: resultが有効な理由リストに含まれているかチェック
+  const validResult = reasons.includes(result) ? result : '○○なので';
+
+  const title = `${validResult}、リモートします。`;
   const description = '今日のリモート理由を診断するアプリ';
-  const ogImageUrl = `/api/og?result=${encodeURIComponent(result)}`;
+  const ogImageUrl = `/api/og?result=${encodeURIComponent(validResult)}`;
 
   return {
     title,
