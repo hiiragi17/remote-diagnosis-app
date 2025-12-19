@@ -28,11 +28,11 @@ https://remote-diagnosis-app.vercel.app/
 ※実際に出てきた理由を使って上司に怒られても責任は負えません。悪しからず※
 
 ## 使用技術
-- Next.js 15.1.8
-- React 19.0.0
+- Next.js 15.5.9
+- React 19.2.3
 - TypeScript 5系
 - Tailwind CSS 3.4.1
-- Vercel Analytics 1.5.0
+- Vercel Analytics 1.6.1
 - Vercel OG 0.6.8
 
 ### 制作期間
